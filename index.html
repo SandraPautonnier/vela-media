@@ -31,6 +31,20 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <!-- Arrière-plan SVG -->
+        <div class="hero-bg">
+            <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1200" height="500" fill="#EEF5FB"/>
+                <!-- Soleil -->
+                <circle cx="950" cy="140" r="120" fill="#D6E9F8"/>
+                <!-- Montagnes arrière -->
+                <polygon points="160,500 480,420 680,500 820,360 1010,500 1080,250 1200,265 1200,500" fill="#C2DCF0" opacity="0.6"/>
+                <!-- Montagnes milieu -->
+                <polygon points="200,500 530,450 700,500 840,395 1020,500 1080,290 1200,320 1200,500" fill="#9BBDD9" opacity="0.75"/>
+                <!-- Montagnes avant -->
+                <polygon points="240,500 580,470 720,500 870,425 1050,500 1110,325 1200,380 1200,500" fill="#7AADC8"/>
+            </svg>
+        </div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
@@ -41,9 +55,9 @@
                     <button class="btn-primary btn-large">Démarrer maintenant</button>
                 </div>
                 <div class="hero-image">
-                    <div class="video-placeholder hero-video-placeholder">
-                        <button class="play-button">▶</button>
-                        <p>Découvrir VELA en 90 secondes</p>
+                    <div class="hero-plane-wrapper">
+                        <div class="hero-sun"></div>
+                        <img src="assets/images/deltaplane.svg" alt="Deltaplane" class="hero-deltaplane">
                     </div>
                 </div>
             </div>
@@ -103,6 +117,16 @@
                         <p>Des décisions concrètes et applicables.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-placeholder">
+                <button class="play-button">▶</button>
+                <p>Découvrir VELA en 90 secondes</p>
             </div>
         </div>
     </section>

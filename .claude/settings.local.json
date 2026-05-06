@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git -C \"D:\\\\Développement\\\\Créatrice Web Intuitive\\\\VELA-Landing-Page-claude-deltaplane-html-page-bwnuJ\" log --oneline)",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}
