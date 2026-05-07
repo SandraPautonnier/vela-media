@@ -1,3 +1,6 @@
+// Dynamic copyright year
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
