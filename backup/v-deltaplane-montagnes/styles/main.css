@@ -278,23 +278,6 @@ body {
     align-items: center;
 }
 
-.hero-paysage {
-    width: 100%;
-    height: auto;
-    display: block;
-    mix-blend-mode: multiply;
-    -webkit-mask-image: radial-gradient(
-        ellipse 90% 85% at 62% 52%,
-        black 40%,
-        transparent 100%
-    );
-    mask-image: radial-gradient(
-        ellipse 90% 85% at 62% 52%,
-        black 40%,
-        transparent 100%
-    );
-}
-
 .hero-plane-wrapper {
     position: relative;
     display: flex;
@@ -470,16 +453,7 @@ body {
     height: 3px;
     background: var(--blue-primary);
     border-radius: 2px;
-    margin: 10px auto 16px;
-}
-
-.section-intro {
-    text-align: center;
-    font-size: 15px;
-    color: var(--gray-text);
-    max-width: 580px;
-    margin: 0 auto 36px;
-    line-height: 1.6;
+    margin: 10px auto 28px;
 }
 
 .section-title-bar {
@@ -501,7 +475,7 @@ body {
 /* ── Pillars ─────────────────────────────────────────── */
 .pillars {
     padding: 80px 0;
-    background: var(--bg-main);
+    background: var(--white);
 }
 
 .pillars .section-title {
@@ -522,30 +496,24 @@ body {
     border: 1px solid var(--gray-border);
     text-align: center;
     transition: box-shadow 0.2s, transform 0.2s;
-    box-shadow: 0 2px 8px rgba(2,17,55,0.04);
 }
 
 .pillar-card:hover {
-    box-shadow: 0 8px 24px rgba(2,17,55,0.09);
+    box-shadow: 0 8px 24px rgba(2,17,55,0.07);
     transform: translateY(-3px);
 }
 
 .pillar-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 16px;
-    font-size: 22px;
+    font-size: 36px;
+    margin-bottom: 12px;
+    display: block;
 }
 
-.pillar-icon.admin      { background: rgba(47,107,255,0.10);  color: #2F6BFF; }
-.pillar-icon.finance    { background: rgba(22,163,74,0.10);   color: #16A34A; }
-.pillar-icon.commerce   { background: rgba(234,108,0,0.10);   color: #EA6C00; }
-.pillar-icon.rh         { background: rgba(147,51,234,0.10);  color: #9333EA; }
-.pillar-icon.production { background: rgba(220,38,38,0.10);   color: #DC2626; }
+.pillar-icon.admin      { color: #2F6BFF; }
+.pillar-icon.finance    { color: #16A34A; }
+.pillar-icon.commerce   { color: #EA6C00; }
+.pillar-icon.rh         { color: #9333EA; }
+.pillar-icon.production { color: #DC2626; }
 
 .pillar-name {
     font-family: var(--font-text);
@@ -843,117 +811,6 @@ body {
     padding: 0 6px;
 }
 
-/* ── Dashboard feature items ─────────────────────────── */
-.dash-features {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    margin-top: 28px;
-}
-
-.dash-feature-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-}
-
-.dash-feature-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
-}
-
-.dash-feature-icon.videos { background: rgba(47,107,255,0.10); color: #2F6BFF; }
-.dash-feature-icon.tools  { background: rgba(22,163,74,0.10);  color: #16A34A; }
-.dash-feature-icon.suivi  { background: rgba(47,107,255,0.10); color: #2F6BFF; }
-
-.dash-feature-body h4 {
-    font-family: var(--font-title);
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--blue-dark);
-    margin-bottom: 4px;
-}
-
-.dash-feature-body p {
-    font-size: 14px;
-    color: var(--gray-text);
-    line-height: 1.5;
-}
-
-/* ── Dashboard mockup logo bar ───────────────────────── */
-.dash-logo-bar {
-    background: var(--white);
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--gray-border);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-}
-
-.dash-logo-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-}
-
-.dash-logo-name {
-    display: flex;
-    align-items: baseline;
-    font-family: var(--font-title);
-    font-weight: 800;
-    font-size: 13px;
-    line-height: 1;
-}
-
-.dash-logo-v   { color: var(--blue-primary); }
-.dash-logo-txt { color: var(--blue-dark); letter-spacing: -0.5px; }
-
-.dash-logo-sub {
-    font-size: 7px;
-    font-weight: 600;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    color: var(--gray-text);
-}
-
-.dash-progress-area {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 9px;
-    color: var(--gray-text);
-    white-space: nowrap;
-}
-
-.dash-prog-bar {
-    width: 56px;
-    height: 4px;
-    background: var(--gray-border);
-    border-radius: 2px;
-    overflow: hidden;
-}
-
-.dash-prog-fill {
-    width: 66%;
-    height: 100%;
-    background: var(--blue-primary);
-    border-radius: 2px;
-}
-
-.dash-prog-value {
-    font-weight: 700;
-    color: var(--blue-primary);
-    font-size: 10px;
-}
-
 /* ── Levels ──────────────────────────────────────────── */
 .levels {
     padding: 80px 0;
@@ -964,19 +821,17 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 16px;
-    align-items: stretch;
 }
 
 .level-card {
     background: var(--white);
     padding: 26px 16px;
     border-radius: 14px;
-    border: 1.5px solid var(--gray-border);
+    border: 1px solid var(--gray-border);
     text-align: center;
     transition: box-shadow 0.2s, transform 0.2s;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .level-card:hover {
@@ -989,20 +844,15 @@ body {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.8px;
-    height: 2.2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-transform: uppercase;
-    margin-bottom: 0;
-    flex-shrink: 0;
+    margin-bottom: 10px;
 }
 
 .level-sep {
     width: 32px;
     height: 2px;
     background: var(--gray-border);
-    margin: 10px auto 14px;
+    margin: 0 auto 12px;
     border-radius: 1px;
 }
 
@@ -1015,18 +865,18 @@ body {
 .level-ca {
     display: block;
     font-family: var(--font-text);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    margin-top: 6px;
-    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-top: auto;
+    padding-top: 14px;
 }
 
-.level-ca.fondateurs     { color: #e8907c; }
-.level-ca.lanceurs       { color: #7aa8ff; }
-.level-ca.accelerateurs  { color: #4fb8d4; }
-.level-ca.consolidateurs { color: #f0a055; }
-.level-ca.capitaines     { color: #d9b045; }
+.level-ca.fondateurs     { color: #DC2626; }
+.level-ca.lanceurs       { color: #2F6BFF; }
+.level-ca.accelerateurs  { color: #0891B2; }
+.level-ca.consolidateurs { color: #EA6C00; }
+.level-ca.capitaines     { color: #CA8A04; }
 
 /* Level colors */
 .level-name.fondateurs     { color: #DC2626; }
@@ -1035,17 +885,11 @@ body {
 .level-name.consolidateurs { color: #EA6C00; }
 .level-name.capitaines     { color: #CA8A04; }
 
-.level-card.fondateurs     { border-color: #DC2626; background: rgba(220, 38, 38, 0.05); }
-.level-card.lanceurs       { border-color: #2F6BFF; background: rgba(47, 107, 255, 0.05); }
-.level-card.accelerateurs  { border-color: #0891B2; background: rgba(8, 145, 178, 0.05); }
-.level-card.consolidateurs { border-color: #EA6C00; background: rgba(234, 108, 0, 0.05); }
-.level-card.capitaines     { border-color: #CA8A04; background: rgba(202, 138, 4, 0.05); }
-
-.level-sep.fondateurs     { background: #DC2626; }
-.level-sep.lanceurs       { background: #2F6BFF; }
-.level-sep.accelerateurs  { background: #0891B2; }
-.level-sep.consolidateurs { background: #EA6C00; }
-.level-sep.capitaines     { background: #CA8A04; }
+.level-card.fondateurs     { border-color: #DC2626; }
+.level-card.lanceurs       { border-color: #2F6BFF; }
+.level-card.accelerateurs  { border-color: #0891B2; }
+.level-card.consolidateurs { border-color: #EA6C00; }
+.level-card.capitaines     { border-color: #CA8A04; }
 
 /* ── Journey ─────────────────────────────────────────── */
 .journey {
@@ -1133,24 +977,23 @@ body {
 
 .pricing-wrapper {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 72px;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
 }
 
 .pricing-content {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 24px;
 }
 
 .pricing-content h2 {
     font-family: var(--font-title);
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--blue-dark);
-    line-height: 1.2;
-    margin-bottom: 0;
+    line-height: 1.3;
 }
 
 .pricing-content h2::after {
@@ -1160,21 +1003,14 @@ body {
     height: 3px;
     background: var(--blue-primary);
     border-radius: 2px;
-    margin: 10px 0 20px;
-}
-
-.pricing-intro {
-    font-size: 15px;
-    color: var(--gray-text);
-    line-height: 1.6;
-    margin-bottom: 28px;
+    margin: 10px 0 28px;
 }
 
 .pricing-features {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 13px;
+    gap: 12px;
 }
 
 .pricing-features li {
@@ -1189,36 +1025,29 @@ body {
     content: "✓";
     color: var(--button-blue);
     font-weight: 700;
-    font-size: 16px;
-    flex-shrink: 0;
+    font-size: 18px;
 }
 
-/* Pricing card (right side) */
-.pricing-card {
-    background: var(--white);
-    border: 1.5px solid var(--gray-border);
-    border-radius: 18px;
-    padding: 36px 32px;
-    box-shadow: 0 4px 20px rgba(2,17,55,0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 0;
+.pricing-box {
+    background: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
 }
 
 .pricing-amount {
     display: flex;
     align-items: baseline;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 24px;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
 }
 
 .amount {
     font-family: var(--font-title);
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 700;
     color: var(--blue-dark);
-    line-height: 1;
 }
 
 .period {
@@ -1229,206 +1058,28 @@ body {
 .pricing-note {
     font-size: 13px;
     color: var(--gray-text);
-    margin-bottom: 24px;
-    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
-.btn-pricing-full {
-    width: 100%;
-    justify-content: center;
-    padding: 15px 24px;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 12px;
-}
-
-.pricing-card-label {
-    text-align: center;
-    font-family: var(--font-title);
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--blue-dark);
-    margin-bottom: 16px;
-    line-height: 1.3;
-}
-
-.pricing-steps {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    counter-reset: pricing-counter;
-}
-
-.pricing-steps li {
-    counter-increment: pricing-counter;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 13px;
-    color: var(--gray-text);
-    line-height: 1.5;
-}
-
-.pricing-steps li::before {
-    content: counter(pricing-counter);
-    background: rgba(16, 124, 225, 0.1);
-    color: var(--blue-primary);
-    font-weight: 700;
-    font-size: 11px;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
+.pricing-image {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
 }
 
-.pricing-disclaimer {
-    text-align: center;
-    font-size: 11px;
-    color: var(--gray-text);
-    margin-top: 12px;
-}
-
-/* ── FAQ ─────────────────────────────────────────────── */
-.faq {
-    padding: 80px 0;
-    background: var(--bg-main);
-}
-
-.faq-list {
-    max-width: 760px;
-    margin: 0 auto;
-    background: var(--white);
+.pricing-img {
+    max-width: 115%;
+    height: auto;
     border-radius: 16px;
-    border: 1px solid var(--gray-border);
-    overflow: hidden;
-}
-
-.faq-item {
-    border-bottom: 1px solid var(--gray-border);
-}
-
-.faq-item:last-child {
-    border-bottom: none;
-}
-
-.faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 28px;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--blue-dark);
-    cursor: pointer;
-    list-style: none;
-    gap: 16px;
-    transition: background 0.2s;
-}
-
-.faq-question::-webkit-details-marker { display: none; }
-
-.faq-question:hover {
-    background: var(--bg-main);
-}
-
-.faq-chevron {
-    color: var(--gray-text);
-    flex-shrink: 0;
-    transition: transform 0.25s ease;
-}
-
-.faq-item[open] .faq-chevron {
-    transform: rotate(180deg);
-}
-
-.faq-item[open] .faq-question {
-    color: var(--blue-primary);
-}
-
-.faq-answer {
-    padding: 0 28px 22px;
-    font-size: 14px;
-    color: var(--gray-text);
-    line-height: 1.7;
 }
 
 /* ── Footer ──────────────────────────────────────────── */
 .footer {
+    padding: 32px 0;
     background: var(--blue-dark);
     color: rgba(255,255,255,0.6);
-    font-size: 13px;
-    padding: 56px 0 0;
-}
-
-.footer-main {
-    display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr;
-    gap: 60px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.footer-logo {
-    display: flex;
-    align-items: baseline;
-    font-family: var(--font-title);
-    font-weight: 800;
-    font-size: 22px;
-    margin-bottom: 16px;
-}
-
-.footer-logo-v   { color: var(--blue-primary); }
-.footer-logo-text { color: #fff; letter-spacing: -0.5px; }
-
-.footer-desc {
-    font-size: 13px;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.7;
-    max-width: 300px;
-}
-
-.footer-heading {
-    font-family: var(--font-text);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
-    margin-bottom: 18px;
-}
-
-.footer-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.footer-nav ul li a {
-    color: rgba(255,255,255,0.65);
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s;
-}
-
-.footer-nav ul li a:hover {
-    color: #fff;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+    text-align: center;
     font-size: 12px;
-    color: rgba(255,255,255,0.3);
 }
 
 /* ── Responsive ──────────────────────────────────────── */
@@ -1439,7 +1090,6 @@ body {
     .levels-grid       { grid-template-columns: repeat(3, 1fr); }
     .dashboard-content { grid-template-columns: 1fr; gap: 40px; }
     .pricing-wrapper   { grid-template-columns: 1fr; gap: 40px; }
-    .pricing-card      { max-width: 480px; }
 }
 
 @media (max-width: 768px) {
