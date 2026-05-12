@@ -122,7 +122,7 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 }
 
 .btn-primary:hover {
-    background: #2d5a7e;
+    background: #39a6e6;
     transform: translateY(-1px);
 }
 
@@ -251,9 +251,10 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 }
 
 .hero-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    gap: 10px 20px;
     list-style: none;
     padding: 0;
     margin-top: 22px;
@@ -976,6 +977,7 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
     padding: 26px 16px;
     border-radius: 14px;
     border: 1.5px solid var(--gray-border);
+    box-shadow: 0 4px 16px rgba(2,17,55,0.07);
     text-align: center;
     transition: box-shadow 0.2s, transform 0.2s;
     display: flex;
@@ -984,13 +986,13 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 }
 
 .level-card:hover {
-    box-shadow: 0 6px 20px rgba(2,17,55,0.07);
+    box-shadow: 0 8px 28px rgba(2,17,55,0.13);
     transform: translateY(-2px);
 }
 
 .level-name {
     font-family: var(--font-text);
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.8px;
     height: 2.2em;
@@ -1019,10 +1021,10 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 .level-ca {
     display: block;
     font-family: var(--font-text);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-top: 4px;
     flex-shrink: 0;
 }
 
@@ -1039,11 +1041,11 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 .level-name.consolidateurs { color: #EA6C00; }
 .level-name.capitaines     { color: #CA8A04; }
 
-.level-card.fondateurs     { border-color: #DC2626; background: rgba(220, 38, 38, 0.05); }
-.level-card.lanceurs       { border-color: #2F6BFF; background: rgba(47, 107, 255, 0.05); }
-.level-card.accelerateurs  { border-color: #0891B2; background: rgba(8, 145, 178, 0.05); }
-.level-card.consolidateurs { border-color: #EA6C00; background: rgba(234, 108, 0, 0.05); }
-.level-card.capitaines     { border-color: #CA8A04; background: rgba(202, 138, 4, 0.05); }
+.level-card.fondateurs     { border-color: #DC2626; }
+.level-card.lanceurs       { border-color: #2F6BFF; }
+.level-card.accelerateurs  { border-color: #0891B2; }
+.level-card.consolidateurs { border-color: #EA6C00; }
+.level-card.capitaines     { border-color: #CA8A04; }
 
 .level-sep.fondateurs     { background: #DC2626; }
 .level-sep.lanceurs       { background: #2F6BFF; }
@@ -1155,7 +1157,7 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 
 .pricing-wrapper {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: 72px;
     align-items: center;
 }
@@ -1325,7 +1327,7 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 
 .trust-content {
     display: grid;
-    grid-template-columns: 1fr 1.4fr;
+    grid-template-columns: 1.4fr 1fr;
     gap: 72px;
     align-items: start;
 }
@@ -1770,7 +1772,7 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
     .hero-text h1      { font-size: 26px; }
     .hero-badge        { font-size: 10px; padding: 3px 9px; }
     .btn-large         { width: 100%; justify-content: center; padding: 13px 18px; font-size: 14px; }
-    .hero-features     { gap: 10px; }
+    .hero-features     { grid-template-columns: 1fr; gap: 8px; }
     .hero-features li  { font-size: 12px; }
 
     /* Header */
