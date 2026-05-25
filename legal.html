@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales – VELA Business Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /* ── Legal page ─────────────────────────────────── */
+        .legal-hero {
+            background: var(--blue-dark);
+            padding: 64px 0 48px;
+        }
+        .legal-hero h1 {
+            font-family: var(--font-title);
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        .legal-hero p {
+            color: rgba(255,255,255,0.65);
+            font-size: 15px;
+        }
+
+        /* ── Tabs ───────────────────────────────────────── */
+        .legal-tabs-bar {
+            background: var(--white);
+            border-bottom: 1.5px solid var(--gray-border);
+            position: sticky;
+            top: 64px;
+            z-index: 100;
+        }
+        .legal-tabs {
+            display: flex;
+            gap: 0;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .legal-tab {
+            padding: 16px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-text);
+            cursor: pointer;
+            border-bottom: 2.5px solid transparent;
+            margin-bottom: -1.5px;
+            transition: color 0.2s, border-color 0.2s;
+            white-space: nowrap;
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-family: var(--font-text);
+        }
+        .legal-tab:hover { color: var(--blue-primary); }
+        .legal-tab.active {
+            color: var(--blue-primary);
+            border-bottom-color: var(--blue-primary);
+        }
+
+        /* ── Content ────────────────────────────────────── */
+        .legal-body {
+            padding: 64px 0 96px;
+            background: var(--bg-main);
+            min-height: 60vh;
+        }
+        .legal-panel { display: none; }
+        .legal-panel.active { display: block; }
+
+        .legal-content {
+            max-width: 780px;
+        }
+
+        .legal-content h2 {
+            font-family: var(--font-title);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--blue-dark);
+            margin: 40px 0 12px;
+        }
+        .legal-content h2:first-child { margin-top: 0; }
+
+        .legal-content h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--blue-dark);
+            margin: 28px 0 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 12px;
+            color: var(--blue-primary);
+        }
+
+        .legal-content p {
+            font-size: 14px;
+            color: var(--gray-text);
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+
+        .legal-content ul {
+            padding-left: 20px;
+            margin-bottom: 14px;
+        }
+        .legal-content ul li {
+            font-size: 14px;
+            color: var(--gray-text);
+            line-height: 1.8;
+            margin-bottom: 4px;
+        }
+
+        .legal-content .legal-block {
+            background: var(--white);
+            border-radius: 14px;
+            border: 1px solid var(--gray-border);
+            padding: 24px 28px;
+            margin-bottom: 20px;
+        }
+
+        .legal-content .legal-block p,
+        .legal-content .legal-block li { margin-bottom: 6px; }
+        .legal-content .legal-block p:last-child { margin-bottom: 0; }
+
+        .legal-article {
+            margin-bottom: 36px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid var(--gray-border);
+        }
+        .legal-article:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .legal-article-number {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--blue-primary);
+            margin-bottom: 6px;
+        }
+        .legal-article h2 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .legal-hero { padding: 48px 0 32px; }
+            .legal-hero h1 { font-size: 26px; }
+            .legal-tabs { padding: 0 16px; overflow-x: auto; }
+            .legal-tab { padding: 14px 16px; font-size: 13px; }
+            .legal-body { padding: 40px 0 64px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" style="text-decoration:none;">
+                    <div class="logo-main">
+                        <span class="logo-v">V</span><span class="logo-text">ELA</span>
+                    </div>
+                    <span class="logo-sub">BUSINESS MEDIA</span>
+                </a>
+                <div class="header-actions">
+                    <a href="https://app.vela-media.fr/login" target="_blank" rel="noopener" class="btn-secondary">Se connecter</a>
+                    <a href="https://app.vela-media.fr/offers/Z2gnVSHb" target="_blank" rel="noopener" class="btn-primary">Rejoindre VELA <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="legal-hero">
+        <div class="container">
+            <h1>Informations légales</h1>
+            <p>Mentions légales, conditions générales de vente et politique de confidentialité</p>
+        </div>
+    </section>
+
+    <!-- Tabs bar -->
+    <div class="legal-tabs-bar">
+        <div class="legal-tabs">
+            <button class="legal-tab active" data-tab="mentions">Mentions légales</button>
+            <button class="legal-tab" data-tab="cgv">CGV</button>
+            <button class="legal-tab" data-tab="confidentialite">Confidentialité</button>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="legal-body">
+        <div class="container">
+            <div class="legal-content">
+
+                <!-- ── MENTIONS LÉGALES ── -->
+                <div class="legal-panel active" id="panel-mentions">
+
+                    <div class="legal-block">
+                        <h3>Éditeur du site</h3>
+                        <p><strong>Célia Campion</strong><br>
+                        VELA Business Media<br>
+                        vela-media.fr / app.vela-media.fr<br>
+                        SASU 93074788600016<br>
+                        60 RUE FRANCOIS IER, 75008 PARIS<br>
+                        <a href="mailto:contact@vela-media.fr" style="color:var(--blue-primary)">contact@vela-media.fr</a></p>
+                    </div>
+
+                    <div class="legal-block">
+                        <h3>Directrice de la publication</h3>
+                        <p>Célia Campion</p>
+                    </div>
+
+                    <div class="legal-block">
+                        <h3>Hébergement</h3>
+                        <p><strong>Kajabi LLC</strong><br>
+                        3790 El Camino Real, Suite 405, Palo Alto, CA 94306, USA<br>
+                        kajabi.com</p>
+                        <p style="margin-top:12px"><strong>Hostinger International Ltd</strong><br>
+                        61 Lordou Vironos Street, 6023 Larnaca, Chypre<br>
+                        hostinger.fr</p>
+                    </div>
+
+                    <h2>Propriété intellectuelle</h2>
+                    <p>L'ensemble des contenus du site (textes, visuels, vidéos, structure) est la propriété exclusive de Célia Campion / VELA Business Media. Toute reproduction sans autorisation préalable est interdite.</p>
+
+                    <h2>Données personnelles</h2>
+                    <p>Les données collectées (nom, email, informations de paiement) sont traitées conformément au RGPD. Elles sont utilisées uniquement dans le cadre de la gestion de votre abonnement et de la communication VELA.</p>
+                    <p>Vous disposez d'un droit d'accès, de rectification et de suppression : <a href="mailto:contact@vela-media.fr" style="color:var(--blue-primary)">contact@vela-media.fr</a></p>
+
+                    <h2>Cookies</h2>
+                    <p>Le site utilise des cookies fonctionnels et analytiques. Vous pouvez gérer vos préférences via le bandeau cookies.</p>
+
+                </div>
+
+                <!-- ── CGV ── -->
+                <div class="legal-panel" id="panel-cgv">
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 1</p>
+                        <h2>Identification de la société</h2>
+                        <p>Les présentes Conditions Générales de Vente (CGV) sont proposées par <strong>VELA MÉDIA</strong>, marque exploitée par la société KiRoMa, société immatriculée sous le numéro SIREN 930 747 886, dont le siège social est situé au 60 Rue François 1er, 75008 Paris.</p>
+                        <p>La société est représentée par Madame Célia Campion, Présidente Directrice Générale. Ci-après dénommée « VELA MÉDIA ».</p>
+                        <p>Toute commande implique l'acceptation pleine et entière des présentes CGV par le client.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 2</p>
+                        <h2>Objet</h2>
+                        <p>Les présentes Conditions Générales de Vente ont pour objet de définir les modalités selon lesquelles VELA MÉDIA, marque exploitée par la société KiRoMa, propose et commercialise ses services, contenus, accompagnements et accès numériques.</p>
+                        <p>VELA MÉDIA développe un écosystème éditorial et stratégique à destination des professionnels et particuliers souhaitant bénéficier de contenus à forte valeur ajoutée autour de l'entrepreneuriat, du positionnement, de la structuration d'activité, de la réflexion stratégique, du développement de marque et de l'accompagnement décisionnel.</p>
+                        <p>Les services proposés peuvent notamment comprendre l'accès à une plateforme numérique sécurisée, des contenus vidéo, des questionnaires, des synthèses stratégiques, des échanges privés, des analyses, des documents confidentiels, ainsi que différentes prestations complémentaires de conseil, mentorat, accompagnement ou consulting.</p>
+                        <p>VELA MÉDIA ne constitue pas une plateforme de formation professionnelle au sens réglementaire du terme, mais un environnement média, éditorial et stratégique proposant des contenus d'analyse, d'inspiration, de réflexion et d'accompagnement.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 3</p>
+                        <h2>Acceptation des conditions</h2>
+                        <p>Toute validation de devis, signature de contrat, paiement d'acompte ou commande implique l'adhésion sans réserve du client aux présentes CGV.</p>
+                        <p>Le client reconnaît avoir pris connaissance des présentes CGV avant toute commande.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 4</p>
+                        <h2>Devis et commandes</h2>
+                        <p>Toute prestation fait l'objet soit d'un devis, soit d'un contrat, soit d'une proposition commerciale, soit d'une commande en ligne, soit d'une souscription à un abonnement.</p>
+                        <p>La commande est considérée comme ferme et définitive après signature du devis ou contrat, ou validation électronique, ou paiement d'un acompte, ou règlement complet.</p>
+                        <p>Toute demande complémentaire pourra faire l'objet d'une facturation additionnelle.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 5</p>
+                        <h2>Tarifs</h2>
+                        <p>Les prix sont exprimés en euros hors taxes (HT) ou toutes taxes comprises (TTC) selon le régime applicable. VELA MÉDIA se réserve le droit de modifier ses tarifs à tout moment. Les prestations sont facturées selon les tarifs en vigueur au jour de la commande.</p>
+                        <p>Sauf mention contraire, les frais de déplacement, d'hébergement, de restauration, de location ou tout frais externe restent à la charge du client.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 6</p>
+                        <h2>Modalités de paiement</h2>
+                        <p>Sauf disposition particulière, un acompte de 30 % à 50 % peut être demandé à la commande, le solde est payable à réception de facture ou selon l'échéancier convenu.</p>
+                        <p>Les règlements peuvent être effectués par virement bancaire, carte bancaire, prélèvement ou tout autre moyen validé par VELA MÉDIA.</p>
+                        <p>Tout retard de paiement entraînera automatiquement des pénalités de retard au taux légal en vigueur, une indemnité forfaitaire de recouvrement de 40 €, ainsi que la suspension éventuelle des prestations.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 7</p>
+                        <h2>Abonnements et programmes récurrents</h2>
+                        <p>VELA MÉDIA propose notamment un abonnement mensuel donnant accès à un espace membre premium accessible en ligne via la plateforme Kajabi ou toute plateforme équivalente choisie par VELA MÉDIA.</p>
+                        <p>L'abonnement est actuellement proposé au tarif de <strong>97 € HT par mois</strong>, sans engagement de durée.</p>
+                        <p>L'accès abonné comprend notamment la mise à disposition d'un contenu vidéo hebdomadaire, d'un questionnaire stratégique hebdomadaire, d'une messagerie privée ainsi que d'un espace personnel sécurisé. Les vidéos restent accessibles pendant une durée de cinq semaines à compter de leur publication.</p>
+                        <p>Les prestations de coaching individuel, consulting, accompagnement stratégique, événements, masterminds ou offres premium complémentaires ne sont pas incluses dans l'abonnement standard.</p>
+                        <p>L'abonnement est renouvelé automatiquement à chaque échéance mensuelle via Stripe. La demande de résiliation peut être effectuée directement depuis la plateforme ou par écrit, sous réserve d'être transmise au minimum sept jours avant la prochaine échéance mensuelle. Toute période commencée reste intégralement due. La résiliation prendra effet à la date anniversaire suivant la demande.</p>
+                        <p>En cas d'incident de paiement, VELA MÉDIA se réserve le droit de suspendre immédiatement l'accès à la plateforme jusqu'à régularisation.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 8</p>
+                        <h2>Délais et livraison</h2>
+                        <p>Les délais communiqués le sont à titre indicatif. VELA MÉDIA ne pourra être tenue responsable des retards causés par un manque de validation client, des éléments non transmis, des modifications successives, un cas de force majeure ou l'intervention de prestataires tiers.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 9</p>
+                        <h2>Obligations du client</h2>
+                        <p>Le client s'engage à fournir des informations exactes, transmettre les éléments nécessaires dans les délais, collaborer activement au bon déroulement des prestations, respecter les échéances de validation et régler les sommes dues.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 10</p>
+                        <h2>Propriété intellectuelle</h2>
+                        <p>L'ensemble des contenus, éléments graphiques, méthodes, frameworks, textes, vidéos, questionnaires, synthèses, visuels, documents, process, outils, mindmaps et contenus diffusés ou produits par VELA MÉDIA est protégé au titre du droit de la propriété intellectuelle.</p>
+                        <p>L'abonnement souscrit confère uniquement un droit d'accès personnel, temporaire, non exclusif et non transférable. Toute reproduction, diffusion, partage ou exploitation non autorisée est strictement interdite. Les identifiants de connexion sont strictement personnels.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 11</p>
+                        <h2>Confidentialité</h2>
+                        <p>VELA MÉDIA et le client s'engagent à conserver confidentielles les informations échangées dans le cadre de la prestation. Cette obligation demeure applicable pendant toute la durée de la collaboration ainsi qu'après sa cessation.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 12</p>
+                        <h2>Responsabilité</h2>
+                        <p>VELA MÉDIA est tenue à une obligation de moyens. Les contenus proposés ont une vocation informative, éditoriale, stratégique et inspirationnelle. Ils ne constituent en aucun cas un conseil juridique, financier, comptable, fiscal ou médical, ni une garantie de résultat.</p>
+                        <p>L'abonné demeure seul responsable des décisions et actions réalisées à partir des contenus proposés par VELA MÉDIA.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 13</p>
+                        <h2>Annulation et report</h2>
+                        <p>Toute annulation d'une prestation devra être formulée par écrit. Sauf disposition spécifique, tout acompte versé reste acquis, toute prestation commencée est due et tout report devra être validé conjointement.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 14</p>
+                        <h2>Force majeure</h2>
+                        <p>VELA MÉDIA ne pourra être tenue responsable d'un manquement résultant d'un événement de force majeure au sens du droit français.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 15</p>
+                        <h2>Données personnelles et RGPD</h2>
+                        <p>Dans le cadre de l'exploitation de ses services, VELA MÉDIA est amenée à collecter, traiter, stocker et utiliser certaines données personnelles des utilisateurs, abonnés, prospects et clients.</p>
+                        <p>Ces données sont collectées afin de permettre la gestion des abonnements, l'exécution des prestations, la personnalisation de l'expérience utilisateur et le respect des obligations légales.</p>
+                        <p>Dans le cadre du fonctionnement de ses services, VELA MÉDIA peut utiliser des outils tiers notamment : Kajabi, Podio, Stripe, Whimsical, Mindmeister, ChatGPT, Claude ou tout autre outil professionnel équivalent.</p>
+                        <p>Conformément au RGPD, chaque utilisateur dispose d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition, de portabilité et de retrait du consentement. Toute demande peut être adressée à : <a href="mailto:contact@vela-media.fr" style="color:var(--blue-primary)">contact@vela-media.fr</a></p>
+                        <h3>15.1 – Droit de rétractation</h3>
+                        <p>Conformément aux articles L.221-18 et suivants du Code de la consommation, les clients particuliers disposent d'un délai de 14 jours pour exercer leur droit de rétractation. En validant sa souscription et en demandant un accès immédiat, l'utilisateur particulier reconnaît expressément renoncer à ce droit.</p>
+                        <h3>15.2 – Médiation à la consommation</h3>
+                        <p>Tout client particulier a le droit de recourir gratuitement à un dispositif de médiation de la consommation. Les coordonnées du médiateur seront mises à disposition sur le site internet de VELA MÉDIA dès leur désignation officielle.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 16</p>
+                        <h2>Références clients</h2>
+                        <p>Sauf refus écrit préalable, VELA MÉDIA pourra utiliser des retours d'expérience anonymisés, des captures anonymisées, des statistiques d'usage ou des témoignages à des fins de communication. Toute publication nominative fera l'objet d'une validation préalable.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 17</p>
+                        <h2>Modération et comportement</h2>
+                        <p>VELA MÉDIA se réserve le droit de suspendre ou supprimer un compte sans remboursement en cas de comportement toxique, non-respect des CGV, atteinte à l'image de VELA MÉDIA, partage non autorisé des contenus ou comportement incompatible avec les valeurs de la plateforme.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 18</p>
+                        <h2>Évolution des services</h2>
+                        <p>VELA MÉDIA se réserve le droit de faire évoluer à tout moment les contenus, formats, fonctionnalités, outils, supports ou modalités d'accès des services proposés. Ces évolutions ne pourront donner lieu à aucun remboursement.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 19</p>
+                        <h2>Droit applicable</h2>
+                        <p>Les présentes CGV sont soumises au droit français. En cas de litige, les parties s'engagent à rechercher une solution amiable avant toute procédure judiciaire. À défaut, les tribunaux compétents seront ceux du ressort du siège social de VELA MÉDIA.</p>
+                    </div>
+
+                    <div class="legal-article">
+                        <p class="legal-article-number">Article 20</p>
+                        <h2>Contact</h2>
+                        <div class="legal-block">
+                            <p><strong>VELA MÉDIA</strong> — Marque exploitée par la société KiRoMa<br>
+                            SIREN : 930 747 886<br>
+                            60 Rue François 1er, 75008 Paris<br>
+                            Représentée par Célia Campion, Présidente Directrice Générale<br>
+                            <a href="mailto:contact@vela-media.fr" style="color:var(--blue-primary)">contact@vela-media.fr</a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ── CONFIDENTIALITÉ ── -->
+                <div class="legal-panel" id="panel-confidentialite">
+
+                    <div class="legal-block">
+                        <h3>Qui sommes-nous ?</h3>
+                        <p>VELA Business Media est une plateforme d'accompagnement stratégique éditée par KiRoMa Sasu, représentée par Célia Campion.</p>
+                    </div>
+
+                    <h2>Les informations que nous collectons</h2>
+                    <p>Dans le cadre de votre abonnement et de votre accompagnement, nous collectons les informations que vous nous transmettez : nom, prénom, adresse email, informations relatives à votre entreprise (chiffre d'affaires, secteur, stade de développement), ainsi que vos réponses aux questionnaires et échanges via la messagerie.</p>
+
+                    <h2>Comment nous utilisons vos informations</h2>
+                    <p>Vos données sont utilisées exclusivement pour personnaliser votre parcours VELA et vous délivrer un accompagnement adapté à votre situation. Elles ne sont en aucun cas revendues ni transmises à des tiers.</p>
+
+                    <h2>Confidentialité des échanges</h2>
+                    <p>KiRoMa s'engage à garantir la stricte confidentialité de toutes les informations que vous partagez dans le cadre de votre accompagnement — qu'elles soient transmises par écrit ou à l'oral, via la plateforme, la messagerie ou lors des sessions visio. Ces informations sont utilisées uniquement dans le cadre de votre mission et ne seront conservées qu'aussi longtemps que votre accompagnement est actif.</p>
+
+                    <h2>Vos droits</h2>
+                    <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande, contactez-nous à : <a href="mailto:contact@vela-media.fr" style="color:var(--blue-primary)">contact@vela-media.fr</a></p>
+
+                    <h2>Cookies</h2>
+                    <p>Le site utilise des cookies fonctionnels nécessaires à son bon fonctionnement. Aucun cookie publicitaire n'est déposé sans votre consentement explicite.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="footer-year"></span> VELA Business Media. Tous droits réservés.</p>
+                <p>vela-media.fr · app.vela-media.fr</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dynamic year
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+        // Tab switching
+        const tabs = document.querySelectorAll('.legal-tab');
+        const panels = document.querySelectorAll('.legal-panel');
+
+        function activateTab(tabName) {
+            tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === tabName));
+            panels.forEach(p => p.classList.toggle('active', p.id === 'panel-' + tabName));
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => activateTab(tab.dataset.tab));
+        });
+
+        // Open tab from URL hash (legal.html#cgv, legal.html#confidentialite)
+        const hash = window.location.hash.replace('#', '');
+        if (hash && ['mentions', 'cgv', 'confidentialite'].includes(hash)) {
+            activateTab(hash);
+        }
+    </script>
+</body>
+</html>

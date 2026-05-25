@@ -117,3 +117,43 @@ handleResponsive();
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
+
+// FAQ accordion — smooth height animation (scrollHeight)
+document.querySelectorAll('.faq-question').forEach(summary => {
+    summary.addEventListener('click', function (e) {
+        e.preventDefault();
+        const details = this.closest('.faq-item');
+        const answer = details.querySelector('.faq-answer');
+
+        if (details.hasAttribute('open')) {
+            // Fermeture : forcer px, attendre 2 frames, animer vers 0
+            answer.style.height = answer.scrollHeight + 'px';
+            answer.style.overflow = 'hidden';
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    answer.style.height = '0px';
+                });
+            });
+            answer.addEventListener('transitionend', () => {
+                details.removeAttribute('open');
+                answer.style.height = '';
+                answer.style.overflow = '';
+            }, { once: true });
+        } else {
+            // Ouverture : ajouter open, mesurer scrollHeight, animer
+            details.setAttribute('open', '');
+            const targetHeight = answer.scrollHeight + 'px';
+            answer.style.height = '0px';
+            answer.style.overflow = 'hidden';
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    answer.style.height = targetHeight;
+                });
+            });
+            answer.addEventListener('transitionend', () => {
+                answer.style.height = 'auto';
+                answer.style.overflow = '';
+            }, { once: true });
+        }
+    });
+});
