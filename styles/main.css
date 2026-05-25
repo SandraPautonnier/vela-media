@@ -570,7 +570,7 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 
 .pillar-name {
     font-family: var(--font-text);
-    font-size: 11px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.8px;
     text-transform: uppercase;
@@ -1078,24 +1078,16 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 .journey-steps {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 8px;
+    align-items: stretch;
+    gap: 10px;
     margin-top: 52px;
     position: relative;
 }
-
-.journey-line {
-    display: none;
-}
-
-
 
 .journey-addon {
     text-align: center;
     margin: 32px auto 0;
 }
-
-.journey-addon-icon { display: none; }
 
 .journey-addon-text {
     font-size: 12px;
@@ -1113,56 +1105,93 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 
 .step-arrow {
     color: #c8dff0;
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     align-items: center;
-    align-self: flex-start;
-    margin-top: 19px;
+    justify-content: center;
     flex-shrink: 0;
+    width: 24px;
 }
 
 .step {
     flex: 1;
     max-width: 220px;
     text-align: center;
-    padding: 0 8px;
+    padding: 28px 18px 20px;
     position: relative;
     z-index: 1;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(2,17,55,0.07);
+    border: 1px solid rgba(2,17,55,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.step-num {
+    font-family: var(--font-text);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--gray-text);
+    opacity: 0.4;
+    margin-bottom: 14px;
+}
 
 .step-circle {
-    width: 56px;
-    height: 56px;
+    width: 52px;
+    height: 52px;
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 16px;
+    margin: 0 auto 14px;
     font-size: 20px;
     border: 1px solid;
 }
 
-.step-video         { background: rgba(47,107,255,0.08);  color: #2F6BFF; border-color: rgba(47,107,255,0.22); }
-.step-questionnaire { background: rgba(22,163,74,0.08);   color: #16A34A; border-color: rgba(22,163,74,0.22); }
-.step-mindmap       { background: rgba(147,51,234,0.08);  color: #9333EA; border-color: rgba(147,51,234,0.22); }
-.step-progression   { background: rgba(217,119,6,0.08);   color: #D97706; border-color: rgba(217,119,6,0.22); }
+.step-video         { background: rgba(8,145,178,0.08);   color: #0891B2; border-color: rgba(8,145,178,0.18); }
+.step-questionnaire { background: rgba(114,184,122,0.10);  color: #72b87a; border-color: rgba(114,184,122,0.22); }
+.step-mindmap       { background: rgba(168,126,192,0.10);  color: #a87ec0; border-color: rgba(168,126,192,0.22); }
+.step-progression   { background: rgba(196,149,58,0.10);   color: #c4953a; border-color: rgba(196,149,58,0.22); }
 
 .step h3 {
     font-family: var(--font-text);
-    font-size: 11px;
+    font-size: 16px;
     font-weight: 700;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
+    letter-spacing: 0;
+    text-transform: none;
     color: var(--blue-dark);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .step p {
     font-size: 13px;
     color: var(--gray-text);
-    line-height: 1.5;
+    line-height: 1.55;
+    flex: 1;
 }
+
+.step-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+.step-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.tag-video         { background: rgba(8,145,178,0.08);   color: #0891B2; }
+.tag-questionnaire { background: rgba(114,184,122,0.10);  color: #72b87a; }
+.tag-mindmap       { background: rgba(168,126,192,0.10);  color: #a87ec0; }
+.tag-progression   { background: rgba(196,149,58,0.10);   color: #c4953a; }
 
 
 /* ── Pricing ─────────────────────────────────────────── */
@@ -1795,9 +1824,8 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 
     /* Journey : empilé verticalement */
     .journey-steps     { flex-direction: column; align-items: center; gap: 12px; }
-    .step              { max-width: 300px; width: 100%; }
-    .step-arrow        { margin-top: 0; align-self: center; transform: rotate(90deg); }
-    .journey-line      { display: none; }
+    .step              { max-width: 340px; width: 100%; }
+    .step-arrow        { margin-top: 0; align-self: center; transform: rotate(90deg); width: auto; }
 
     /* Trust */
     .trust-content     { grid-template-columns: 1fr; gap: 40px; }
