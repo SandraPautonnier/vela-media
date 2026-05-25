@@ -889,9 +889,9 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
     flex-shrink: 0;
 }
 
-.dash-feature-icon.videos { background: rgba(47,107,255,0.10); color: #2F6BFF; }
-.dash-feature-icon.tools  { background: rgba(22,163,74,0.10);  color: #16A34A; }
-.dash-feature-icon.suivi  { background: rgba(47,107,255,0.10); color: #2F6BFF; }
+.dash-feature-icon.videos { background: rgba(16,124,225,0.10); color: #107ce1; border: 1px solid rgba(16,124,225,0.22); }
+.dash-feature-icon.tools  { background: rgba(16,124,225,0.10); color: #107ce1; border: 1px solid rgba(16,124,225,0.22); }
+.dash-feature-icon.suivi  { background: rgba(16,124,225,0.10); color: #107ce1; border: 1px solid rgba(16,124,225,0.22); }
 
 .dash-feature-body h4 {
     font-family: var(--font-title);
@@ -1774,7 +1774,8 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 
     /* Pricing */
     .pricing-wrapper   { grid-template-columns: 1fr; gap: 48px; }
-    .pricing-card      { max-width: 520px; margin: 0 auto; width: 100%; }
+    .pricing-card      { max-width: 520px; margin: 0 auto; width: 100%; order: 2; }
+    .pricing-content   { order: 1; }
 
     /* Footer */
     .footer-main       { grid-template-columns: 1fr 1fr; gap: 40px; }
