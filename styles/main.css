@@ -401,20 +401,36 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
     background: var(--bg-main);
 }
 
+.video-wrapper {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
 .video-placeholder {
     background: #0d1828;
-    border-radius: 20px;
-    aspect-ratio: 16/7;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    max-width: 860px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
     cursor: pointer;
-    overflow: hidden;
-    position: relative;
+    z-index: 2;
+}
+
+.video-player {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .video-placeholder::before {

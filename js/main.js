@@ -35,12 +35,25 @@ document.querySelectorAll('.fade-in, .slide-in, .fade-in-up').forEach(el => {
     observer.observe(el);
 });
 
-// Video play button interaction
-const videoPlaceholder = document.querySelector('.video-placeholder');
-if (videoPlaceholder) {
-    videoPlaceholder.addEventListener('click', () => {
-        // Placeholder for video modal/player
-        alert('Vidéo: Découvrir VELA en 90 secondes');
+// Video play button — lancer la vidéo Wistia au clic
+const playBtn = document.getElementById('playBtn');
+const videoThumb = document.getElementById('videoThumb');
+
+if (playBtn && videoThumb) {
+    playBtn.addEventListener('click', () => {
+        // Masquer le thumbnail
+        videoThumb.style.opacity = '0';
+        videoThumb.style.pointerEvents = 'none';
+        setTimeout(() => { videoThumb.style.display = 'none'; }, 0);
+
+        // Lancer la vidéo via l'API Wistia
+        window._wq = window._wq || [];
+        window._wq.push({
+            id: 'hscdrx3iyb',
+            onReady: function(video) {
+                video.play();
+            }
+        });
     });
 }
 

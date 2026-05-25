@@ -113,9 +113,18 @@
     <!-- Video Section -->
     <section class="video-section" id="comment-ca-marche">
         <div class="container">
-            <div class="video-placeholder">
-                <button class="play-button">▶</button>
-                <p>Découvrir VELA en 90 secondes</p>
+            <div class="video-wrapper">
+                <!-- Thumbnail personnalisé -->
+                <div class="video-placeholder" id="videoThumb">
+                    <button class="play-button" id="playBtn">▶</button>
+                    <p>Découvrir VELA en 90 secondes</p>
+                </div>
+                <!-- Player Wistia -->
+                <div class="video-player" id="videoPlayer">
+                    <script src="https://fast.wistia.com/embed/medias/hscdrx3iyb.jsonp" async></script>
+                    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <div class="wistia_embed wistia_async_hscdrx3iyb videoFoam=true silentAutoPlay=false" style="width:100%;height:100%;">&nbsp;</div>
+                </div>
             </div>
         </div>
     </section>
