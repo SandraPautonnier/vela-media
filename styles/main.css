@@ -84,8 +84,8 @@ body {
 .logo-sub {
     font-family: var(--font-text);
     font-size: 10px;
-    font-weight: 700;
-    color: var(--blue-primary);
+    font-weight: 600;
+    color: var(--gray-text);
     letter-spacing: 0.5px;
     text-transform: uppercase;
     border-left: 1px solid var(--gray-border);
@@ -235,19 +235,19 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
     line-height: 1.6;
 }
 
-.hero-price {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 6px 10px;
+.hero-desc {
+    font-size: 15px;
+    color: var(--gray-text);
     margin-bottom: 24px;
+    max-width: 460px;
+    line-height: 1.6;
 }
 
-.hero-price-lead {
-    font-size: 14px;
-    color: var(--gray-text);
-    font-weight: 500;
-    white-space: nowrap;
+.hero-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
 }
 
 .hero-price-amount {
@@ -272,24 +272,6 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
     font-weight: 600;
     padding: 4px 12px;
     border-radius: 20px;
-}
-
-.hero-cb-note {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 12.5px;
-    color: var(--gray-text);
-    line-height: 1.5;
-    max-width: 460px;
-    margin-top: 14px;
-}
-
-.hero-cb-note i {
-    color: var(--blue-primary);
-    font-size: 13px;
-    margin-top: 2px;
-    flex-shrink: 0;
 }
 
 .hero-features {
@@ -406,6 +388,40 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-16px); }
+}
+
+/* ── Credibility Strip ───────────────────────────────── */
+.credibility-strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-border);
+    padding: 18px 0;
+}
+
+.credibility-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.credibility-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.credibility-inner p {
+    font-size: 14px;
+    color: var(--gray-text);
+    margin: 0;
+}
+
+.credibility-inner p strong {
+    color: var(--blue-dark);
 }
 
 /* ── Features ────────────────────────────────────────── */
@@ -597,6 +613,77 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
     margin-bottom: 40px;
 }
 
+/* ── Pillars ─────────────────────────────────────────── */
+.pillars {
+    padding: 80px 0;
+    background: var(--bg-main);
+}
+
+.pillars .section-title {
+    margin-bottom: 8px;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-top: 48px;
+}
+
+.pillar-card {
+    background: var(--white);
+    padding: 32px 16px;
+    border-radius: 16px;
+    border: 1px solid var(--gray-border);
+    text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(2,17,55,0.04);
+}
+
+.pillar-card:hover {
+    box-shadow: 0 8px 24px rgba(2,17,55,0.09);
+    transform: translateY(-3px);
+}
+
+.pillar-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 22px;
+}
+
+.pillar-icon.admin      { background: rgba(47,107,255,0.10);  color: #2F6BFF; }
+.pillar-icon.finance    { background: rgba(22,163,74,0.10);   color: #16A34A; }
+.pillar-icon.commerce   { background: rgba(234,108,0,0.10);   color: #EA6C00; }
+.pillar-icon.rh         { background: rgba(147,51,234,0.10);  color: #9333EA; }
+.pillar-icon.production { background: rgba(220,38,38,0.10);   color: #DC2626; }
+
+.pillar-name {
+    font-family: var(--font-text);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.pillar-card p {
+    font-size: 13px;
+    color: var(--gray-text);
+    line-height: 1.55;
+}
+
+/* Pillar colors */
+.pillar-name.admin      { color: #2F6BFF; }
+.pillar-name.finance    { color: #16A34A; }
+.pillar-name.commerce   { color: #EA6C00; }
+.pillar-name.rh         { color: #9333EA; }
+.pillar-name.production { color: #DC2626; }
+
 /* ── Dashboard ───────────────────────────────────────── */
 .dashboard {
     padding: 80px 0;
@@ -662,16 +749,7 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 
 .dashboard-image {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-.dashboard-mockup-caption {
-    text-align: center;
-    font-size: 12px;
-    color: var(--gray-text);
-    margin-top: 12px;
 }
 
 .dashboard-mockup {
@@ -1541,27 +1619,6 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
     margin-top: 12px;
 }
 
-.pricing-guarantee {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(16, 124, 225, 0.06);
-    border: 1px solid rgba(16, 124, 225, 0.18);
-    border-radius: 10px;
-    padding: 12px 14px;
-    margin-bottom: 20px;
-    font-size: 13px;
-    color: var(--blue-dark);
-    font-weight: 500;
-    line-height: 1.4;
-}
-
-.pricing-guarantee i {
-    color: var(--blue-primary);
-    font-size: 16px;
-    flex-shrink: 0;
-}
-
 /* ── Trust ───────────────────────────────────────────── */
 .trust {
     padding: 80px 0;
@@ -1969,8 +2026,9 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
     /* Features */
     .features-grid     { grid-template-columns: repeat(2, 1fr); }
 
-    /* Levels */
+    /* Levels & Pillars */
     .levels-grid       { grid-template-columns: repeat(3, 1fr); }
+    .pillars-grid      { grid-template-columns: repeat(3, 1fr); }
 
     /* Dashboard */
     .dashboard-content { grid-template-columns: 1fr; gap: 48px; }
@@ -1999,7 +2057,7 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 
     /* Section spacing */
     .video-section,
-    .levels, .dashboard,
+    .levels, .dashboard, .pillars,
     .journey, .trust, .pricing, .faq, .testimonials { padding: 56px 0; }
 
     /* Testimonials : 1 colonne */
@@ -2027,6 +2085,7 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 
     /* Levels & Pillars : 2 colonnes */
     .levels-grid       { grid-template-columns: repeat(2, 1fr); }
+    .pillars-grid      { grid-template-columns: repeat(2, 1fr); }
 
     /* Dashboard mockup : masquer le menu latéral */
     .dashboard-mockup  { height: auto; }
@@ -2067,7 +2126,7 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 
     /* Section spacing */
     .video-section,
-    .levels, .dashboard,
+    .levels, .dashboard, .pillars,
     .journey, .trust, .pricing, .faq, .testimonials { padding: 44px 0; }
 
     /* Hero */
@@ -2093,6 +2152,7 @@ a.btn-primary, a.btn-secondary { text-decoration: none; }
 
     /* Levels & Pillars : 1 colonne */
     .levels-grid       { grid-template-columns: 1fr; }
+    .pillars-grid      { grid-template-columns: 1fr; }
 
     /* Journey */
     .step              { max-width: 100%; }
